@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+        // class Vehicle {
+        //     public $color;
+
+        //     public function move() {
+        //         echo "ruszam";
+        //     }
+
+        //     public function __construct($brand, $color) {
+        //         $this->color = $color;
+        //     }
+        // }
+
+        // class Car extends Vehicle implements Drivable {
+        //     public $brand;
+        //     public $color;
+
+        //     public function move() {
+        //         echo "nadpisałem";
+        //     }
+
+        //     public function __construct($brand, $color) {
+        //         $this->brand = $brand;
+        //         $this->color = $color;
+        //     }
+
+        //     public function displayThis() {
+        //         return "$this->color $this->brand";
+        //     }
+        // }
+
+        // class Truck extends Vehicle implements Drivable {
+
+        // }
+
+        // $car = new car("Toyota", "Blue");
+        // $info = $car->move();
+        // echo $info;
+
+        // if ($car instanceof Vehicle) {
+        //     echo "<br>ta";
+        // } else {
+        //     echo "nie";
+        // }
+
+        // class Animal {
+        //     public $name;
+        //     public $age;
+
+        //     public function __construct($name, $age) {
+        //         $this->name = $name;
+        //         $this->age = $age;
+        //     }
+
+        //     public function eat() {
+        //         return "Zwierzę je";
+        //     }
+        // }
+
+        // class Cat extends Animal {
+        //     public function __construct($name, $age) {
+        //         return parent::__construct($name, $age);
+        //     }
+
+        //     public function eat() {
+        //         return "Zwierzę ję kocią karme";
+        //     }
+        // }
+
+        // class Dog extends Animal {
+        //     public function __construct($name, $age) {
+        //         return parent::__construct($name, $age);
+        //     }
+
+        //     public function eat() {
+        //         return "Zwierzę ję psią karme";
+        //     }
+        // }
+
+        // class Employee {
+        //     public $department;
+
+        //     public function __construct($name, $salary) {
+        //         $this->name = $name;
+        //         $this->salary = $salary;
+        //     }
+        // }
+
+        // class Manager extends Employee {
+        //     public function __construct($name, $salary, $department) {
+        //         $this->department;
+        //         return parent::__construct($name, $salary);
+        //     }
+
+        //     public function showInfo() {
+        //         return "$this->department - $this->salary $this->name";
+        //     }
+        // }
+
+        // class Book {
+        //     public $title;
+        //     public $author;
+
+        //     public function __construct($title, $author) {
+        //         $this->title = $title;
+        //         $this->author = $author;
+        //     }
+
+        //     public function getinfo() {
+        //         return "$this->title / $this->author";
+        //     }
+        // }
+
+        // class Ebook extends Book {
+        //     public $fileSize;
+
+        //     public function __construct($title, $author, $fileSize) {
+        //         $this->fileSize - $fileSize;
+        //         return parent::__construct($title, $author);
+        //     }
+
+        //     public function getinfo() {
+        //         return "$this->title / $this->author / $this->fileSize";
+        //     }
+        // }
+
+        interface Renderable {
+            public function render();
+        }
+
+        interface JsonSerializer{
+            public function serializeThis();
+        }
+
+        interface Drivable{
+            public function drive();
+        }
+
+        class HtmlElement implements Renderable{
+            public $element;
+
+            public function __construct($element) {
+                $this->element = $element;
+            }
+
+            public function render() {
+                return "render";
+            }
+        }
+
+        class Product implements JsonSerializer{
+            public $name;
+
+            public function __construct($name) {
+                $this->name = $name;
+            }
+
+            public function serializeThis() {
+                return "serialize";
+            }
+        }
+
+    ?>
+</body>
+</html>
