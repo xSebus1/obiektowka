@@ -152,7 +152,7 @@
             }
 
             public function render() {
-                return "render";
+                return $this->element;
             }
         }
 
@@ -164,7 +164,7 @@
             }
 
             public function serializeThis() {
-                return "serialize";
+                return [$this->name];
             }
         }
 
